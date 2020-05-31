@@ -9,38 +9,33 @@
 ![Contributors](https://img.shields.io/github/contributors/2kabhishek/goatsay?style=plastic&color=ff69b4&label=Contributors)
 ![Followers](https://img.shields.io/github/followers/2kabhishek?style=plastic&color=blue&label=Followers)
 
-goatsay is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+Make the goat say anything you wish.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-* You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `go`
 
 ## Installing goatsay
 
 To install goatsay, follow these steps:
 
-Linux & Mac OS:
-
 ```bash
 git clone https://github.com/2kabhishek/goatsay
 cd goatsay
-<install_command>
-```
-
-Windows:
-
-```bash
-<install_command>
+go build
+go install
 ```
 
 ## Using goatsay
 
 To use goatsay, follow these steps:
 
-```bash
-<usage_example>
 ```
-### More Info
+USAGE:
+    <command> | goatsay [OPTIONS]
 
+OPTIONS:
+        -f <figure>    Select figure. Options are : goat, dog.
+```
