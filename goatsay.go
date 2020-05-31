@@ -69,7 +69,7 @@ func normalizeStr(text []string, longest int) []string {
 
 func printArt(name string) {
 
-	var goat = `/ /
+	var goat = `             / /
           (\/_//')
            /   '/
           0  0   \
@@ -85,9 +85,9 @@ func printArt(name string) {
               / /   | |      | | '\ \
              / /    | |      | |   \ \
             / (     | |      | |    \ \
-		   /,_)    /__)     /__)   /,_/`
+           /,_)    /__)     /__)   /,_/`
 
-	var dog = ` __
+	var dog = `                __
                /\/'-,
        ,--'''''   /"
  ____,'.  )       \___
@@ -105,7 +105,7 @@ func printArt(name string) {
 
 func main() {
 	var figure string
-	flag.StringVar(&figure, "f", "goat", "Figure Name. Available `goat` and `dog`")
+	flag.StringVar(&figure, "f", "goat", "Figure name - options goat, dog")
 	flag.Parse()
 
 	inputInfo, _ := os.Stdin.Stat()
