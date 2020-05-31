@@ -127,4 +127,9 @@ func main() {
 	text = tabsToSpaces(text)
 	longest := getLongest(text)
 	text = normalizeStr(text, longest)
+	bubble := makeBubble(text, longest)
+
+	fmt.Println(bubble)
+	printArt(figure)
+	fmt.Println()
 }
