@@ -1,7 +1,11 @@
 package main
 
 import (
+	"bufio"
+	"flag"
 	"fmt"
+	"io"
+	"os"
 	"strings"
 	"unicode/utf8"
 )
@@ -55,6 +59,7 @@ func getLongest(text []string) int {
 }
 
 func printArt(name string) {
+
 	var goat = `/ /
           (\/_//')
            /   '/
@@ -87,5 +92,30 @@ func printArt(name string) {
 	default:
 		fmt.Println("Art not found.")
 	}
+}
 
+func main() {
+	var figure string
+	flag.StringVar(&figure, "f", "goat", "Figure Name. Available `goat` and `dog`")
+	flag.Parse()
+
+	inputInfo, _ := os.Stdin.Stat()
+	if inputInfo.Mode()&os.ModeCharDevice != 0 {
+		fmt.Println("goatsay is intended to work with pipes.\n Usage: command | goatsay")
+	}
+
+	var text []string
+
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		line, _, err := reader.ReadLine()
+		if err != nil && err == io.EOF {
+			break
+		}
+		text = append(text, string(line))
+	}
+
+	text = tabsToSpaces(text)
+	longest := getLongest(text)
+	text = normalizeStr(text, longest)
 }
