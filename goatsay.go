@@ -58,6 +58,15 @@ func getLongest(text []string) int {
 	return longest
 }
 
+func normalizeStr(text []string, longest int) []string {
+	var out []string
+	for _, line := range text {
+		s := line + strings.Repeat(" ", longest-utf8.RuneCountInString(line))
+		out = append(out, s)
+	}
+	return out
+}
+
 func printArt(name string) {
 
 	var goat = `/ /
