@@ -110,7 +110,8 @@ func main() {
 
 	inputInfo, _ := os.Stdin.Stat()
 	if inputInfo.Mode()&os.ModeCharDevice != 0 {
-		fmt.Println("goatsay is intended to work with pipes.\n Usage: command | goatsay")
+		fmt.Println("goatsay works with pipe inputs.\nUsage: command | goatsay")
+		os.Exit(1)
 	}
 
 	var text []string
