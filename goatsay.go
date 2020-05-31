@@ -53,3 +53,39 @@ func getLongest(text []string) int {
 	}
 	return longest
 }
+
+func printArt(name string) {
+	var goat = `/ /
+          (\/_//')
+           /   '/
+          0  0   \
+         /        \
+        /    __/   \
+       /,  _/ \     \_
+       '-./ )  |     ~^~^~^~^~^~^~^~\~.
+           (   /                     \_}
+              |               /      |
+              ;     |         \      /
+               \/ ,/           \    |
+               / /~~|~|~~~~~~|~|\   |
+              / /   | |      | | '\ \
+             / /    | |      | |   \ \
+            / (     | |      | |    \ \
+		   /,_)    /__)     /__)   /,_/`
+
+	var dog = ` __
+               /\/'-,
+       ,--'''''   /"
+ ____,'.  )       \___
+'"""""------'"""'-----'`
+
+	switch name {
+	case "goat":
+		fmt.Println(goat)
+	case "dog":
+		fmt.Println(dog)
+	default:
+		fmt.Println("Art not found.")
+	}
+
+}
