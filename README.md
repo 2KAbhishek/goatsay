@@ -32,7 +32,7 @@ go install
 
 To use goatsay, follow these steps:
 
-```
+```bash
 USAGE:
     <command> | goatsay [OPTIONS]
 
