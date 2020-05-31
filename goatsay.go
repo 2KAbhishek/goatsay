@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"unicode/utf8"
 )
 
 func makeBubble(text []string, longest int) string {
@@ -40,4 +41,15 @@ func tabsToSpaces(text []string) []string {
 		out = append(out, line)
 	}
 	return out
+}
+
+func getLongest(text []string) int {
+	longest := 0
+	for _, line := range text {
+		currLen := utf8.RuneCountInString(line)
+		if currLen > longest {
+			longest = currLen
+		}
+	}
+	return longest
 }
