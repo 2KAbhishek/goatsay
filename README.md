@@ -1,5 +1,3 @@
-<div align="center">
-
 # goatsay
 
 ![Size](https://img.shields.io/github/repo-size/2kabhishek/goatsay?style=plastic&color=0f0&label=Size)
@@ -12,7 +10,6 @@
 
 Make the goat say anything you wish.
 
-</div>
 
 
 ## Prerequisites
@@ -44,5 +41,4 @@ OPTIONS:
         -f <figure>    Select figure. Options are : goat, dog.
 ```
 
-Please consider hitting the ⭐ star button if this repo was useful to you, any contributions and suggestions are welcome.
 
