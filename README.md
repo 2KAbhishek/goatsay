@@ -10,8 +10,6 @@
 
 Make the goat say anything you wish.
 
-
-
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -40,5 +38,3 @@ USAGE:
 OPTIONS:
         -f <figure>    Select figure. Options are : goat, dog.
 ```
-
-
